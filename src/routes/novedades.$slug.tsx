@@ -14,9 +14,16 @@ export const Route = createFileRoute("/novedades/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
+      const title = "Nota no encontrada | CENTRAL Santa Rosa de Lima";
+      const description = "Consulta las novedades de CENTRAL Santa Rosa de Lima.";
       return {
         meta: [
-           { title: "Nota no encontrada | CENTRAL Santa Rosa de Lima" },
+          { title },
+          { name: "description", content: description },
+          { property: "og:title", content: title },
+          { property: "og:description", content: description },
+          { property: "og:type", content: "website" },
+          { name: "twitter:card", content: "summary_large_image" },
           { name: "robots", content: "noindex" },
         ],
       };

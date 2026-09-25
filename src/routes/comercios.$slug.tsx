@@ -18,9 +18,16 @@ export const Route = createFileRoute("/comercios/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
+      const title = "Comercio no encontrado | CENTRAL Santa Rosa de Lima";
+      const description = "Consulta el directorio de CENTRAL Santa Rosa de Lima.";
       return {
         meta: [
-          { title: "Comercio no encontrado | CENTRAL Santa Rosa de Lima" },
+          { title },
+          { name: "description", content: description },
+          { property: "og:title", content: title },
+          { property: "og:description", content: description },
+          { property: "og:type", content: "website" },
+          { name: "twitter:card", content: "summary_large_image" },
           { name: "robots", content: "noindex" },
         ],
       };
