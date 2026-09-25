@@ -19,6 +19,7 @@ import { center } from "@/data/center";
 import { allStores } from "@/data/stores";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/central-santa-rosa-de-lima-primary.png.asset.json";
+import logoReverseAsset from "@/assets/central-santa-rosa-de-lima-reverse.png.asset.json";
 
 const menuGroups = [
   {
@@ -104,11 +105,11 @@ export function LocationSwitcher({ inverse = false, compact = false }: { inverse
   );
 }
 
-function Wordmark({ onNavigate }: { onNavigate?: () => void }) {
+function Wordmark({ onNavigate, reverse = false }: { onNavigate?: () => void; reverse?: boolean }) {
   return (
     <Link to="/" onClick={onNavigate} className="block" aria-label={`${site.fullName}, inicio`}>
       <img
-        src={logoAsset.url}
+        src={reverse ? logoReverseAsset.url : logoAsset.url}
         alt="CENTRAL Santa Rosa de Lima"
         width={1600}
         height={574}
@@ -219,7 +220,7 @@ export function Header() {
                     <X className="size-5" />
                     <span className="hidden sm:inline">Cerrar</span>
                   </Button>
-                   <Wordmark onNavigate={() => setOpen(false)} />
+                   <Wordmark reverse onNavigate={() => setOpen(false)} />
                   <Link
                     to="/visitanos"
                     onClick={() => setOpen(false)}
