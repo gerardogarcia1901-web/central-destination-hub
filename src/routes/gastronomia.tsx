@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/central/primitives";
 import { ContentPlaceholder } from "@/components/central/Placeholders";
 import { CtaSection } from "@/components/central/CtaSection";
-import { center } from "@/data/center";
 
 const TITLE = "Gastronomía | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
@@ -30,21 +29,18 @@ function GastronomiaPage() {
         title="Gastronomía"
         description="Próximamente conocerás las opciones para comer en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Gastronomía" }]}
-      >
-        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{center.hoursNote}</p>
-      </PageHero>
+       />
 
       <Section className="py-12 md:py-16">
         <ContentPlaceholder
           title="Próximamente conocerás las opciones para comer en Central Santa Rosa de Lima."
-          description="La oferta gastronómica se comunicará oficialmente conforme avance el proyecto."
         />
       </Section>
 
       <CtaSection
         eyebrow="Directorio"
-        title="Marcas y comercios"
-        description="Conoce todas las marcas que formarán parte de CENTRAL."
+         title="Directorio"
+         description="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
         primary={{ label: "Ver directorio", to: "/comercios" }}
         secondary={{ label: "Cómo llegar", to: "/visitanos" }}
       />

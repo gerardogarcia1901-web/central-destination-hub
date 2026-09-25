@@ -1,7 +1,9 @@
 import type { CenterInfo } from "./types";
 
-const OFFICIAL_MAPS_URL = "https://maps.app.goo.gl/yQxG4hH6yQxG4hH6";
-const MAPS_PLACE = "Central Santa Rosa de Lima";
+const ADDRESS = "Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador";
+const MAPS_PLACE = ADDRESS;
+const OFFICIAL_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
+const OFFICIAL_WAZE_URL = `https://www.waze.com/ul?q=${encodeURIComponent(ADDRESS)}&navigate=yes`;
 
 export const center: CenterInfo = {
   name: "CENTRAL Santa Rosa de Lima",
@@ -18,10 +20,9 @@ export const center: CenterInfo = {
   address: "Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador",
   addressDetail: "Frente al desvío hacia Bolívar.",
   mapsUrl: OFFICIAL_MAPS_URL,
-  wazeUrl: OFFICIAL_MAPS_URL,
+  wazeUrl: OFFICIAL_WAZE_URL,
   mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(MAPS_PLACE)}&z=15&output=embed`,
-  hoursNote:
-    "Central Santa Rosa de Lima se encuentra en desarrollo. Los horarios estarán disponibles con la apertura.",
+  hoursNote: "Próximamente",
   stats: [],
   directions: [
     {

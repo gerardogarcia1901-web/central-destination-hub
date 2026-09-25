@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/central/primitives";
 import { ContentPlaceholder } from "@/components/central/Placeholders";
-import { center } from "@/data/center";
 
 const TITLE = "Directorio | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
@@ -26,17 +25,14 @@ function ComerciosPage() {
     <>
       <PageHero
         eyebrow="Directorio"
-        title="Marcas y comercios"
+         title="Directorio"
         description="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Directorio" }]}
-      >
-        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{center.hoursNote}</p>
-      </PageHero>
+       />
 
       <Section className="py-12 md:py-16">
         <ContentPlaceholder
           title="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
-          description="Estamos trabajando para traerte las mejores opciones. Por ahora no se muestran comercios ficticios."
         />
       </Section>
     </>

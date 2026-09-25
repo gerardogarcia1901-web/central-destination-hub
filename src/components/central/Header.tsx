@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Search, ExternalLink, X, Globe2, ChevronDown, Check, Clock } from "lucide-react";
+import { Menu, Search, ExternalLink, X, Globe2, ChevronDown, Check, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -215,8 +215,8 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className="ml-auto inline-flex items-center gap-2 text-sm font-medium text-ink-foreground transition-opacity hover:opacity-70"
                   >
-                    <Clock className="size-5" aria-hidden />
-                    <span className="hidden sm:inline">Horarios</span>
+                     <MapPin className="size-5" aria-hidden />
+                     <span className="hidden sm:inline">Cómo llegar</span>
                   </Link>
                 </div>
 
@@ -251,7 +251,7 @@ export function Header() {
 
                 <div className="container-central flex flex-col gap-4 border-t border-ink-foreground/15 py-8 md:flex-row md:items-center md:justify-between md:gap-8">
                   <SearchDialog expanded />
-                  <p className="max-w-md text-xs leading-relaxed text-ink-foreground/50">{center.hoursNote}</p>
+                   <p className="max-w-md text-xs leading-relaxed text-ink-foreground/50">Un nuevo Central está por llegar a Santa Rosa de Lima.</p>
                   <div className="w-fit md:shrink-0">
                     <LocationSwitcher inverse />
                   </div>

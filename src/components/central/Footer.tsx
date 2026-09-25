@@ -99,7 +99,7 @@ export function Footer() {
                   {center.address}
                 </li>
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-ink-foreground/45">{center.hoursNote}</p>
+              <p className="mt-6 text-xs leading-relaxed text-ink-foreground/45">Próximamente</p>
             </div>
           </div>
         </div>
