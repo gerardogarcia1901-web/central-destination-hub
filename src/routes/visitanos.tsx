@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PageHero, Section, SectionHeading } from "@/components/central/primitives";
 import { CtaSection } from "@/components/central/CtaSection";
 import { center } from "@/data/center";
+import { site } from "@/data/site";
 
 const TITLE = "Cómo llegar | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Encuentra la ubicación de Central Santa Rosa de Lima y abre la ruta en Google Maps o Waze.";
+  "Encuentra la ubicación de Central Santa Rosa de Lima y abre tu ruta en Google Maps o Waze.";
 
 export const Route = createFileRoute("/visitanos")({
   head: () => ({
@@ -19,25 +21,6 @@ export const Route = createFileRoute("/visitanos")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ShoppingCenter",
-          name: center.name,
-          description: center.description,
-          address: {
-            "@type": "PostalAddress",
-             streetAddress: "Ruta Militar / RN18E, frente al desvío hacia Bolívar",
-            addressLocality: center.city,
-            addressRegion: center.department,
-            addressCountry: "SV",
-          },
-        }),
-      },
-    ],
-    links: [{ rel: "canonical", href: "/visitanos" }],
   }),
   component: VisitanosPage,
 });
@@ -46,9 +29,9 @@ function VisitanosPage() {
   return (
     <>
       <PageHero
-         eyebrow="Central Santa Rosa de Lima"
+        eyebrow="Central Santa Rosa de Lima"
         title="Cómo llegar"
-        description={`${center.address}. ${center.addressDetail}`}
+        description={center.address}
         breadcrumbs={[{ label: "Cómo llegar" }]}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
@@ -65,7 +48,6 @@ function VisitanosPage() {
         </div>
       </PageHero>
 
-      {/* DIRECCIÓN Y MAPA */}
       <Section className="py-14 md:py-20">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
@@ -76,6 +58,27 @@ function VisitanosPage() {
             <p className="mt-4 leading-relaxed">{center.address}</p>
             <p className="mt-3 text-muted-foreground">{center.addressDetail}</p>
 
+            <div className="mt-10 border-t border-border pt-6">
+              <p className="eyebrow flex items-center gap-2 text-muted-foreground">
+                <Clock className="size-4" aria-hidden /> Horarios
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{center.hoursNote}</p>
+            </div>
+
+            <ul className="mt-10 space-y-4 border-t border-border pt-6 text-sm">
+              <li className="flex gap-3">
+                <MessageCircle className="mt-0.5 size-4 shrink-0" aria-hidden />
+                <a href={site.whatsappUrl} target="_blank" rel="noreferrer" className="hover:underline">
+                  WhatsApp CENTRAL {site.whatsapp}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="mt-0.5 size-4 shrink-0" aria-hidden />
+                <a href={`mailto:${site.email}`} className="break-all hover:underline">
+                  {site.email}
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="lg:col-span-7">
@@ -106,25 +109,28 @@ function VisitanosPage() {
         </div>
       </Section>
 
-      {/* REFERENCIAS */}
-      <Section tone="sand" className="py-14 md:py-20">
-        <SectionHeading eyebrow="Referencias" title="Cómo ubicarnos" />
-        <ul className="mt-10 grid gap-px sm:grid-cols-2 lg:grid-cols-3">
-          {center.directions.map((item) => (
-            <li key={item.label} className="border-t border-border pt-5">
-              <p className="font-display text-base font-semibold uppercase tracking-tight">{item.label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-            </li>
+      <Section className="py-14 md:py-20">
+        <SectionHeading eyebrow="Preguntas frecuentes" title="Información del proyecto" />
+        <Accordion type="single" collapsible className="mt-10 border-t border-border">
+          {center.faqs.map((faq) => (
+            <AccordionItem key={faq.question} value={faq.question} className="border-b border-border">
+              <AccordionTrigger className="py-6 text-left font-display text-base font-semibold uppercase tracking-tight hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="pb-6 text-sm leading-relaxed text-muted-foreground">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </ul>
+        </Accordion>
       </Section>
 
       <CtaSection
         eyebrow="Contacto"
-        title="¿Tienes una consulta sobre la plaza?"
-         description="Contáctanos para recibir más información sobre Central Santa Rosa de Lima."
+        title="¿Tienes una consulta?"
+        description={`Escríbenos al WhatsApp ${site.whatsapp} o al correo ${site.email} y te ayudamos.`}
         primary={{ label: "Ir a contacto", to: "/contacto" }}
-        secondary={{ label: "Ver directorio", to: "/comercios" }}
+        secondary={{ label: "Arrendamiento", to: "/arrendamientos" }}
       />
     </>
   );

@@ -4,7 +4,7 @@ import { LeasingForm } from "@/components/central/LeasingForm";
 
 const TITLE = "Arrendamiento | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Solicita información de arrendamiento para CENTRAL Santa Rosa de Lima.";
+  "Solicita información para arrendar un local en CENTRAL Santa Rosa de Lima, un nuevo proyecto comercial en desarrollo.";
 
 export const Route = createFileRoute("/arrendamientos")({
   head: () => ({
@@ -26,9 +26,9 @@ function ArrendamientosPage() {
       <PageHero
         eyebrow="Arrendamiento"
         title="Su marca puede ser parte de CENTRAL."
-         description="Consulta por oportunidades de arrendamiento en Central Santa Rosa de Lima."
+        description="Conoce las oportunidades de arrendamiento en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Arrendamiento" }]}
-       />
+      />
 
       <Section className="py-14 md:py-20">
         <LeasingForm />

@@ -5,7 +5,7 @@ import { CtaSection } from "@/components/central/CtaSection";
 
 const TITLE = "Eventos | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Eventos de CENTRAL Santa Rosa de Lima.";
+  "Por ahora no hay eventos publicados en Central Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/eventos")({
   head: () => ({
@@ -25,23 +25,23 @@ function EventosPage() {
   return (
     <>
       <PageHero
-         eyebrow="CENTRAL Santa Rosa de Lima"
+        eyebrow="CENTRAL Santa Rosa de Lima"
         title="Eventos"
-         description="Por ahora no hay eventos publicados. Vuelve pronto para conocer lo que viene en Central Santa Rosa de Lima."
+        description="Por ahora no hay eventos publicados. Vuelve pronto para conocer lo que viene en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Eventos" }]}
       />
       <Section className="py-14 md:py-20">
         <ContentPlaceholder
-           eyebrow="CENTRAL Santa Rosa de Lima"
+          eyebrow="CENTRAL Santa Rosa de Lima"
           title="Por ahora no hay eventos publicados."
-           description="Vuelve pronto para conocer lo que viene en Central Santa Rosa de Lima."
+          description="Vuelve pronto para conocer lo que viene en Central Santa Rosa de Lima."
         />
       </Section>
 
       <CtaSection
         eyebrow="Directorio"
-        title="Encuentra lo que buscas."
-        description="Tiendas, gastronomía, servicios y más."
+        title="Marcas y comercios"
+        description="Conoce todas las marcas que formarán parte de CENTRAL."
         primary={{ label: "Ver directorio", to: "/comercios" }}
         secondary={{ label: "Cómo llegar", to: "/visitanos" }}
       />
