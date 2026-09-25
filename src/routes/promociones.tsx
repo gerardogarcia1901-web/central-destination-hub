@@ -6,9 +6,9 @@ import { CtaSection } from "@/components/central/CtaSection";
 import { promotions } from "@/data/promotions";
 import { allStores } from "@/data/stores";
 
-const TITLE = "Promociones | CENTRAL San Miguel Centro";
+const TITLE = "Promociones | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Promociones de los comercios y campañas conjuntas de CENTRAL San Miguel Centro, la plaza comercial del Centro de San Miguel.";
+  "Promociones de CENTRAL Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/promociones")({
   head: () => ({
@@ -30,9 +30,9 @@ function PromocionesPage() {
   return (
     <>
       <PageHero
-        eyebrow="CENTRAL San Miguel Centro"
+         eyebrow="CENTRAL Santa Rosa de Lima"
         title="Promociones"
-        description="Conoce las promociones disponibles en Central San Miguel Centro."
+         description="Por ahora no hay promociones disponibles. Vuelve pronto para conocer nuevas promociones en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Promociones" }]}
       />
 
@@ -48,9 +48,9 @@ function PromocionesPage() {
           </>
         ) : (
           <ContentPlaceholder
-            eyebrow="CENTRAL San Miguel Centro"
+             eyebrow="CENTRAL Santa Rosa de Lima"
             title="Por ahora no hay promociones disponibles."
-            description="Vuelve pronto para conocer nuevas promociones en Central San Miguel Centro."
+             description="Vuelve pronto para conocer nuevas promociones en Central Santa Rosa de Lima."
           />
         )}
       </Section>

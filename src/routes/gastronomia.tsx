@@ -1,13 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/central/primitives";
-import { StoreCard } from "@/components/central/cards";
+import { ContentPlaceholder } from "@/components/central/Placeholders";
 import { CtaSection } from "@/components/central/CtaSection";
-import { allStores } from "@/data/stores";
-import { center } from "@/data/center";
 
-const TITLE = "Gastronomía | CENTRAL San Miguel Centro";
+const TITLE = "Gastronomía | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Conoce las opciones para comer disponibles en Central San Miguel Centro.";
+  "Próximamente conocerás las opciones para comer en Central Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/gastronomia")({
   head: () => ({
@@ -24,28 +22,17 @@ export const Route = createFileRoute("/gastronomia")({
 });
 
 function GastronomiaPage() {
-  const results = allStores.filter((s) => s.categorySlug === "gastronomia");
-
   return (
     <>
       <PageHero
-        eyebrow="Central San Miguel Centro"
+         eyebrow="Central Santa Rosa de Lima"
         title="Gastronomía"
-        description="Encuentra opciones para comer en Central San Miguel Centro."
+         description="Próximamente conocerás las opciones para comer en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Gastronomía" }]}
-      >
-        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">{center.hoursNote}</p>
-      </PageHero>
+       />
 
       <Section className="py-12 md:py-16">
-        <p className="text-sm text-muted-foreground" aria-live="polite">
-          {results.length} {results.length === 1 ? "comercio" : "comercios"}
-        </p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {results.map((store) => (
-            <StoreCard key={store.slug} store={store} />
-          ))}
-        </div>
+         <ContentPlaceholder title="Próximamente conocerás las opciones para comer en Central Santa Rosa de Lima." />
       </Section>
 
       <CtaSection

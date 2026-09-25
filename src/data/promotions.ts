@@ -1,9 +1,8 @@
 import type { Promotion } from "./types";
 
 /**
- * Promociones oficiales de CENTRAL San Miguel Centro.
- * Vacío a propósito: Grupo Galo aún no ha proporcionado contenidos definitivos.
- * La página muestra placeholders identificados mientras tanto.
+ * Promociones oficiales de CENTRAL Santa Rosa de Lima.
+ * Santa Rosa se presenta como Próximamente y no cuenta con promociones vigentes.
  */
 export const promotions: Promotion[] = [];
 

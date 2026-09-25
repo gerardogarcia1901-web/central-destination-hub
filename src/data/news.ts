@@ -1,8 +1,8 @@
 import type { Article } from "./types";
 
 /**
- * Novedades oficiales de CENTRAL San Miguel Centro.
- * Vacío a propósito: Grupo Galo aún no ha proporcionado contenidos definitivos.
+ * Novedades oficiales de CENTRAL Santa Rosa de Lima.
+ * Santa Rosa se presenta como Próximamente.
  */
 export const articles: Article[] = [];
 

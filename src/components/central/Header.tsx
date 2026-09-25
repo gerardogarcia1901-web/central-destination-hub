@@ -87,7 +87,7 @@ export function LocationSwitcher({ inverse = false, compact = false }: { inverse
         <DropdownMenuSeparator className="m-0" />
         <div className="flex items-center gap-3 px-5 py-3 text-xs text-muted-foreground">
           <Check className="size-3.5" aria-hidden />
-          Estás en San Miguel Centro
+          Estás en Santa Rosa de Lima
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -133,7 +133,7 @@ function SearchDialog({ expanded = false }: { expanded?: boolean }) {
       </DialogTrigger>
       <DialogContent className="top-24 max-w-2xl translate-y-0 rounded-none border-border p-0">
         <DialogHeader className="border-b px-6 py-4">
-          <DialogTitle className="eyebrow text-muted-foreground">Buscar en San Miguel Centro</DialogTitle>
+          <DialogTitle className="eyebrow text-muted-foreground">Buscar en Santa Rosa de Lima</DialogTitle>
         </DialogHeader>
         <div className="p-6">
           <Input

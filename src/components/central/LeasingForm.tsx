@@ -43,7 +43,7 @@ export function LeasingForm() {
             <Input
               id="l-proyecto"
               name="proyecto"
-              value="San Miguel Centro"
+              value="Santa Rosa de Lima"
               readOnly
               aria-readonly
               className="h-11 rounded-none bg-sand"

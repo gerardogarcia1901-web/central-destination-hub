@@ -1,68 +1,66 @@
 import type { CenterInfo } from "./types";
 
-const OFFICIAL_MAPS_URL = "https://maps.app.goo.gl/DDknT8fWG61nBKt27";
-const MAP_LATITUDE = 13.4822358;
-const MAP_LONGITUDE = -88.1776408;
-const MAPS_PLACE = "central plaza | San Miguel Centro";
+const OFFICIAL_MAPS_URL = "https://maps.app.goo.gl/yQxG4hH6yQxG4hH6";
+const MAPS_PLACE = "Central Santa Rosa de Lima";
 
 export const center: CenterInfo = {
-  name: "CENTRAL San Miguel Centro",
-  shortName: "San Miguel Centro",
-  city: "San Miguel",
-  department: "San Miguel",
-  tagline: "El corazón comercial de San Miguel",
+  name: "CENTRAL Santa Rosa de Lima",
+  shortName: "Santa Rosa de Lima",
+  city: "Santa Rosa de Lima",
+  department: "La Unión",
+  tagline: "Un nuevo Central está por llegar a Santa Rosa de Lima",
   description:
-    "Plaza comercial urbana ubicada en el Centro de San Miguel.",
+    "Un nuevo Central está por llegar a Santa Rosa de Lima.",
   longDescription: [
-    "Plaza comercial urbana ubicada en el Centro de San Miguel.",
-    "Carácter peatonal. No cuenta con parqueo propio.",
+    "Un nuevo Central está por llegar a Santa Rosa de Lima.",
+    "El proyecto se encuentra en desarrollo.",
   ],
-  address: "2da Calle Poniente y 1ra Avenida Norte, Centro de San Miguel, El Salvador",
-  addressDetail: "Frente al nuevo Mercado Central, ex Parque Barrios.",
+  address: "Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador",
+  addressDetail: "Frente al desvío hacia Bolívar.",
   mapsUrl: OFFICIAL_MAPS_URL,
   wazeUrl: OFFICIAL_MAPS_URL,
-  mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(MAPS_PLACE)}&z=18&output=embed`,
+  mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(MAPS_PLACE)}&z=15&output=embed`,
   hoursNote:
-    "Los horarios varían según cada comercio. Consulta el Directorio para conocer los horarios de atención.",
-  stats: [
-    { label: "Ubicación", value: "Plaza comercial urbana ubicada en el Centro de San Miguel." },
-    { label: "Acceso", value: "Carácter peatonal." },
-    { label: "Parqueo", value: "No cuenta con parqueo propio." },
-    { label: "Horarios", value: "Los horarios varían según cada comercio." },
-  ],
+    "Central Santa Rosa de Lima se encuentra en desarrollo. Los horarios estarán disponibles con la apertura.",
+  stats: [],
   directions: [
     {
       label: "Dirección",
-      description: "2da Calle Poniente y 1ra Avenida Norte, Centro de San Miguel, El Salvador.",
-    },
-    {
-      label: "Referencia",
-      description: "Frente al nuevo Mercado Central, ex Parque Barrios.",
-    },
-    {
-      label: "Acceso",
-      description: "Plaza peatonal. No cuenta con parqueo propio.",
+      description: "Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador.",
     },
   ],
   faqs: [
     {
-      question: "¿Cuál es el horario de la plaza?",
-      answer:
-        "Los horarios varían según cada comercio. Consulta el Directorio para conocer los horarios de atención.",
+      question: "¿Dónde estará Central Santa Rosa de Lima?",
+      answer: "Sobre Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador.",
     },
     {
-      question: "¿Dónde están ubicados?",
-      answer:
-        "En la 2da Calle Poniente y 1ra Avenida Norte, Centro de San Miguel, frente al nuevo Mercado Central, ex Parque Barrios.",
+      question: "¿Central Santa Rosa de Lima ya está abierto?",
+      answer: "No. El proyecto se encuentra en desarrollo y se presenta públicamente como Próximamente.",
     },
     {
-      question: "¿La plaza tiene parqueo?",
-      answer: "Central San Miguel Centro es una plaza peatonal y no cuenta con parqueo propio.",
+      question: "¿Cuándo abrirá Central Santa Rosa de Lima?",
+      answer: "La fecha de apertura se comunicará a través de los canales oficiales de CENTRAL cuando corresponda.",
     },
     {
-      question: "¿Cómo consulto por un local disponible?",
-      answer:
-        "Envía tu solicitud desde la sección de Arrendamientos y el equipo de Grupo Galo te contactará. También puedes escribir al WhatsApp 7697-9921.",
+      question: "¿Qué marcas habrá en Central Santa Rosa de Lima?",
+      answer: "Las marcas se anunciarán en los canales oficiales de CENTRAL conforme sean confirmadas para publicación.",
+    },
+    {
+      question: "¿Habrá gastronomía y servicios?",
+      answer: "La oferta de gastronomía y servicios se comunicará oficialmente conforme avance el proyecto.",
+    },
+    {
+      question: "¿Dónde puedo ver promociones y eventos?",
+      answer: "Las secciones Promociones y Eventos están publicadas y mostrarán la información vigente cuando exista actividad confirmada.",
+    },
+    {
+      question: "¿Cómo llego al proyecto?",
+      answer: "Puedes abrir la ubicación en Google Maps o Waze desde la sección Cómo llegar.",
+    },
+    {
+      question: "¿Cómo puedo consultar por arrendamiento?",
+      answer: "Completa el formulario de Arrendamiento de Central Santa Rosa de Lima.",
     },
   ],
 };
