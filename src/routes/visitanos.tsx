@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PageHero, Section, SectionHeading } from "@/components/central/primitives";
 import { CtaSection } from "@/components/central/CtaSection";
 import { center } from "@/data/center";
-import { site } from "@/data/site";
 
 const TITLE = "Cómo llegar | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
@@ -58,27 +56,6 @@ function VisitanosPage() {
             <p className="mt-4 leading-relaxed">{center.address}</p>
             <p className="mt-3 text-muted-foreground">{center.addressDetail}</p>
 
-            <div className="mt-10 border-t border-border pt-6">
-              <p className="eyebrow flex items-center gap-2 text-muted-foreground">
-                <Clock className="size-4" aria-hidden /> Horarios
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{center.hoursNote}</p>
-            </div>
-
-            <ul className="mt-10 space-y-4 border-t border-border pt-6 text-sm">
-              <li className="flex gap-3">
-                <MessageCircle className="mt-0.5 size-4 shrink-0" aria-hidden />
-                <a href={site.whatsappUrl} target="_blank" rel="noreferrer" className="hover:underline">
-                  WhatsApp CENTRAL {site.whatsapp}
-                </a>
-              </li>
-              <li className="flex gap-3">
-                <Mail className="mt-0.5 size-4 shrink-0" aria-hidden />
-                <a href={`mailto:${site.email}`} className="break-all hover:underline">
-                  {site.email}
-                </a>
-              </li>
-            </ul>
           </div>
 
           <div className="lg:col-span-7">
@@ -109,26 +86,10 @@ function VisitanosPage() {
         </div>
       </Section>
 
-      <Section className="py-14 md:py-20">
-        <SectionHeading eyebrow="Preguntas frecuentes" title="Información del proyecto" />
-        <Accordion type="single" collapsible className="mt-10 border-t border-border">
-          {center.faqs.map((faq) => (
-            <AccordionItem key={faq.question} value={faq.question} className="border-b border-border">
-              <AccordionTrigger className="py-6 text-left font-display text-base font-semibold uppercase tracking-tight hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="pb-6 text-sm leading-relaxed text-muted-foreground">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Section>
-
       <CtaSection
         eyebrow="Contacto"
-        title="¿Tienes una consulta?"
-        description={`Escríbenos al WhatsApp ${site.whatsapp} o al correo ${site.email} y te ayudamos.`}
+         title="¿Tienes una consulta sobre el proyecto?"
+         description="Contáctanos para recibir más información sobre Central Santa Rosa de Lima."
         primary={{ label: "Ir a contacto", to: "/contacto" }}
         secondary={{ label: "Arrendamiento", to: "/arrendamientos" }}
       />
