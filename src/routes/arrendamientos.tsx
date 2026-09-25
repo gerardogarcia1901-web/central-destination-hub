@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/central/primitives";
 import { LeasingForm } from "@/components/central/LeasingForm";
 
-const TITLE = "Arrendamiento | CENTRAL San Miguel Centro";
+const TITLE = "Arrendamiento | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Solicita información para arrendar un local en CENTRAL San Miguel Centro, plaza comercial urbana y peatonal en el Centro de San Miguel.";
+  "Solicita información para arrendar un local en CENTRAL Santa Rosa de Lima, un nuevo proyecto comercial en desarrollo.";
 
 export const Route = createFileRoute("/arrendamientos")({
   head: () => ({
@@ -26,20 +26,9 @@ function ArrendamientosPage() {
       <PageHero
         eyebrow="Arrendamiento"
         title="Su marca puede ser parte de CENTRAL."
-        description="Conoce las oportunidades de arrendamiento en Central San Miguel Centro."
+        description="Conoce las oportunidades de arrendamiento en Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Arrendamiento" }]}
-      >
-        <dl className="grid max-w-xl grid-cols-2 gap-6 border-t border-foreground/15 pt-6">
-          <div>
-            <dt className="eyebrow text-muted-foreground">Área arrendable aproximada</dt>
-            <dd className="display-md mt-2 text-2xl">≈ 1,300 m²</dd>
-          </div>
-          <div>
-            <dt className="eyebrow text-muted-foreground">Locales comerciales</dt>
-            <dd className="display-md mt-2 text-2xl">6</dd>
-          </div>
-        </dl>
-      </PageHero>
+      />
 
       <Section className="py-14 md:py-20">
         <LeasingForm />

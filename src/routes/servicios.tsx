@@ -1,13 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Clock, Footprints, Mail, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/central/primitives";
+import { ContentPlaceholder } from "@/components/central/Placeholders";
 import { CtaSection } from "@/components/central/CtaSection";
-import { site } from "@/data/site";
 
-const TITLE = "Servicios | CENTRAL San Miguel Centro";
-const DESCRIPTION =
-  "Horarios por comercio, acceso peatonal y contacto de Central San Miguel Centro, plaza comercial en el Centro de San Miguel.";
+const TITLE = "Servicios | CENTRAL Santa Rosa de Lima";
+const DESCRIPTION = "Central Santa Rosa de Lima se encuentra en desarrollo. Los servicios al visitante estarán disponibles con la apertura.";
 
 export const Route = createFileRoute("/servicios")({
   head: () => ({
@@ -27,60 +24,22 @@ function ServiciosPage() {
   return (
     <>
       <PageHero
-        eyebrow="Central San Miguel Centro"
+        eyebrow="Central Santa Rosa de Lima"
         title="Servicios"
-        description="Cada comercio maneja su propio horario. Consulta el Directorio para conocer los horarios de atención."
+        description="Central Santa Rosa de Lima se encuentra en desarrollo. Los servicios al visitante estarán disponibles con la apertura."
         breadcrumbs={[{ label: "Servicios" }]}
-      >
-        <Button asChild size="lg" className="rounded-none px-8 eyebrow">
-          <Link to="/comercios">Ver directorio</Link>
-        </Button>
-      </PageHero>
+       />
 
       <Section className="py-14 md:py-20">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div className="rule-line pt-5">
-            <p className="eyebrow flex items-center gap-2 text-muted-foreground">
-              <Clock className="size-4" aria-hidden /> Horarios
-            </p>
-            <p className="mt-4 leading-relaxed">
-              Cada comercio maneja su propio horario. Consulta el Directorio para conocer los horarios de atención.
-            </p>
-          </div>
-          <div className="rule-line pt-5">
-            <p className="eyebrow flex items-center gap-2 text-muted-foreground">
-              <Footprints className="size-4" aria-hidden /> Acceso
-            </p>
-            <p className="mt-4 leading-relaxed">
-              Central San Miguel Centro es una plaza peatonal y no cuenta con parqueo propio.
-            </p>
-          </div>
-          <div className="rule-line pt-5">
-            <p className="eyebrow text-muted-foreground">Contacto</p>
-            <ul className="mt-4 space-y-3">
-              <li className="flex gap-3">
-                <MessageCircle className="mt-1 size-4 shrink-0" aria-hidden />
-                <a href={site.whatsappUrl} target="_blank" rel="noreferrer" className="hover:underline">
-                  WhatsApp {site.whatsapp}
-                </a>
-              </li>
-              <li className="flex gap-3">
-                <Mail className="mt-1 size-4 shrink-0" aria-hidden />
-                <a href={`mailto:${site.email}`} className="break-all hover:underline">
-                  {site.email}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+         <ContentPlaceholder title="Central Santa Rosa de Lima se encuentra en desarrollo. Los servicios al visitante estarán disponibles con la apertura." />
       </Section>
 
       <CtaSection
         eyebrow="Cómo llegar"
-        title="2da Calle Poniente y 1ra Avenida Norte"
-        description="Frente al nuevo Mercado Central, ex Parque Barrios."
+         title="Ruta Militar / RN18E"
+         description="Frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador."
         primary={{ label: "Cómo llegar", to: "/visitanos" }}
-        secondary={{ label: "Ver directorio", to: "/comercios" }}
+        secondary={{ label: "Contacto", to: "/contacto" }}
       />
     </>
   );

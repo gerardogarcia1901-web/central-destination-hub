@@ -16,7 +16,7 @@ export function Footer() {
             <p className="wordmark text-3xl md:text-4xl">CENTRAL</p>
             <p className="mt-2 eyebrow text-ink-foreground/60">{site.subtitle}</p>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-ink-foreground/60">
-              Plaza comercial urbana en el Centro de San Miguel.
+              Un nuevo Central está por llegar a Santa Rosa de Lima.
             </p>
             <div className="mt-4 w-fit">
               <LocationSwitcher inverse />
@@ -99,7 +99,7 @@ export function Footer() {
                   {center.address}
                 </li>
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-ink-foreground/45">{center.hoursNote}</p>
+              <p className="mt-6 text-xs leading-relaxed text-ink-foreground/45">Próximamente</p>
             </div>
           </div>
         </div>

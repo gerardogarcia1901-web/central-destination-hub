@@ -117,7 +117,7 @@ export function PromotionCard({ promotion, storeName }: { promotion: Promotion; 
       )}
       <div className="absolute inset-0 -z-10 bg-ink/60" aria-hidden />
       <div className="p-7">
-        <p className="eyebrow text-ink-foreground/60">CENTRAL San Miguel Centro · {promotion.kind}</p>
+        <p className="eyebrow text-ink-foreground/60">CENTRAL Santa Rosa de Lima · {promotion.kind}</p>
         <h3 className="display-md mt-4 text-2xl md:text-3xl">{promotion.title}</h3>
         <p className="mt-3 text-sm text-ink-foreground/75">{promotion.description}</p>
         <p className="mt-4 text-xs uppercase tracking-widest text-ink-foreground/50">{promotion.validity}</p>
@@ -159,7 +159,7 @@ export function NewsCard({ article, featured = false }: { article: Article; feat
       </Link>
       <div className={cn("pt-5", featured && "lg:w-2/5 lg:pt-0")}>
         <p className="eyebrow text-muted-foreground">
-          CENTRAL San Miguel Centro · {article.category} · {article.displayDate}
+          CENTRAL Santa Rosa de Lima · {article.category} · {article.displayDate}
         </p>
         <h3
           className={cn(

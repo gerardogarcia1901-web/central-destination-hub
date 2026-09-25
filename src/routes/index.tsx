@@ -1,17 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Clock, MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading } from "@/components/central/primitives";
-import { StoreCard, PromotionCard, NewsCard } from "@/components/central/cards";
 import { ContentPlaceholder } from "@/components/central/Placeholders";
 import { CtaSection } from "@/components/central/CtaSection";
-import { stores } from "@/data/stores";
-import { promotions } from "@/data/promotions";
-import { articles } from "@/data/news";
 import { center } from "@/data/center";
 
-const TITLE = "Central San Miguel Centro | CENTRAL";
-const DESCRIPTION = "Encuentra comercios, gastronomía, servicios, promociones, eventos y cómo llegar a Central San Miguel Centro.";
+const TITLE = "Central Santa Rosa de Lima | CENTRAL";
+const DESCRIPTION = "Un nuevo Central está por llegar a Santa Rosa de Lima. Encuentra información sobre el proyecto, ubicación y arrendamiento.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,12 +40,12 @@ function Home() {
             <h1 className="display-xl mt-8">
               Central
               <br />
-              San Miguel
+              Santa Rosa
               <br />
-              Centro
+              de Lima
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Encuentra comercios, gastronomía y servicios en el centro de San Miguel.
+              Un nuevo Central está por llegar a Santa Rosa de Lima.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="rounded-none px-8 eyebrow">
@@ -63,19 +59,11 @@ function Home() {
         </div>
       </section>
 
-      {/* INFORMACIÓN DEL CENTRO */}
+      {/* ESTADO PRÓXIMAMENTE */}
       <section aria-label="Información de la plaza" className="border-b border-border bg-background">
         <div className="container-central py-14 md:py-20">
-          <p className="eyebrow text-muted-foreground">Encuentra lo que buscas.</p>
-          <h2 className="display-md mt-4">Tiendas, gastronomía, servicios y más.</h2>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {center.stats.map((item) => (
-              <li key={item.label} className="rule-line pt-4">
-                <p className="eyebrow text-muted-foreground">{item.label}</p>
-                <p className="mt-3 leading-relaxed">{item.value}</p>
-              </li>
-            ))}
-          </ul>
+          <p className="eyebrow text-muted-foreground">Próximamente</p>
+           <h2 className="display-md mt-4">Un nuevo Central está por llegar a Santa Rosa de Lima.</h2>
         </div>
       </section>
 
@@ -83,22 +71,14 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="Directorio"
-          title="Encuentra lo que buscas."
-          action={
-            <Button asChild variant="outline" className="rounded-none eyebrow">
-              <Link to="/comercios">Ver directorio</Link>
-            </Button>
-          }
+           title="Directorio"
+          description="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
         />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {stores.map((store) => (
-            <StoreCard key={store.slug} store={store} />
-          ))}
+        <div className="mt-12">
+          <ContentPlaceholder
+            title="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
+          />
         </div>
-        <p className="mt-10 flex items-start gap-3 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
-          <Clock className="mt-0.5 size-4 shrink-0" aria-hidden />
-          {center.hoursNote}
-        </p>
       </Section>
 
       {/* PROMOCIONES */}
@@ -106,44 +86,19 @@ function Home() {
         <SectionHeading
           eyebrow="Promociones"
           title="Promociones"
-          description="Conoce las promociones disponibles en Central San Miguel Centro."
-          action={
-            <Button asChild variant="outline" className="rounded-none eyebrow">
-              <Link to="/promociones">Ver promociones</Link>
-            </Button>
-          }
+          description="Por ahora no hay promociones disponibles. Vuelve pronto para conocer nuevas promociones en Central Santa Rosa de Lima."
         />
         <div className="mt-12">
-          {promotions.length ? (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {promotions.slice(0, 3).map((promo) => (
-                <PromotionCard key={promo.slug} promotion={promo} />
-              ))}
-            </div>
-          ) : (
-            <ContentPlaceholder
-              title="Por ahora no hay promociones disponibles."
-              description="Vuelve pronto para conocer nuevas promociones en Central San Miguel Centro."
-            />
-          )}
+          <ContentPlaceholder
+            title="Por ahora no hay promociones disponibles."
+            description="Vuelve pronto para conocer nuevas promociones en Central Santa Rosa de Lima."
+          />
         </div>
       </Section>
 
-      {/* NOVEDADES (editorial) */}
-      {articles.length > 0 && (
-        <Section>
-          <SectionHeading eyebrow="Novedades" title="Novedades" />
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
-            {articles.slice(0, 3).map((article) => (
-              <NewsCard key={article.slug} article={article} />
-            ))}
-          </div>
-        </Section>
-      )}
-
       {/* CÓMO LLEGAR */}
       <Section>
-        <SectionHeading eyebrow="Cómo llegar" title="En el centro de San Miguel" />
+        <SectionHeading eyebrow="Cómo llegar" title="En Santa Rosa de Lima" />
         <div className="mt-12 grid gap-10 lg:grid-cols-2">
           <div className="rule-line pt-4">
             <p className="eyebrow flex items-center gap-2 text-muted-foreground">
@@ -169,7 +124,7 @@ function Home() {
       <CtaSection
         eyebrow="Arrendamiento"
         title="Su marca puede ser parte de CENTRAL."
-        description="Conoce las oportunidades de arrendamiento en Central San Miguel Centro."
+        description="Conoce las oportunidades de arrendamiento en Central Santa Rosa de Lima."
         primary={{ label: "Solicitar información", to: "/arrendamientos" }}
         secondary={{ label: "Contacto", to: "/contacto" }}
       />

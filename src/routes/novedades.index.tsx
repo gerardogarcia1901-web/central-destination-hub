@@ -5,9 +5,9 @@ import { ContentPlaceholder } from "@/components/central/Placeholders";
 import { CtaSection } from "@/components/central/CtaSection";
 import { articles } from "@/data/news";
 
-const TITLE = "Novedades | CENTRAL San Miguel Centro";
+const TITLE = "Novedades | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Aperturas, actividades y noticias de CENTRAL San Miguel Centro, la plaza comercial urbana del Centro de San Miguel.";
+  "Novedades de CENTRAL Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/novedades/")({
   head: () => ({
@@ -29,9 +29,9 @@ function NovedadesPage() {
   return (
     <>
       <PageHero
-        eyebrow="CENTRAL San Miguel Centro"
+         eyebrow="CENTRAL Santa Rosa de Lima"
         title="Novedades"
-        description="Noticias y contenido editorial de Central San Miguel Centro."
+         description="Noticias y contenido editorial de Central Santa Rosa de Lima."
         breadcrumbs={[{ label: "Novedades" }]}
       />
       <Section className="py-14 md:py-20">
@@ -48,7 +48,7 @@ function NovedadesPage() {
           </>
         ) : (
           <ContentPlaceholder
-            eyebrow="CENTRAL San Miguel Centro"
+             eyebrow="CENTRAL Santa Rosa de Lima"
             title="Por ahora no hay novedades publicadas."
             description="Vuelve pronto para conocer las novedades de CENTRAL."
           />

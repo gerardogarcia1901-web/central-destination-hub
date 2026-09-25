@@ -3,8 +3,8 @@ import { PageHero, Section } from "@/components/central/primitives";
 import { LegalDocument } from "@/components/central/LegalDocument";
 import privacyText from "@/data/legal/privacidad.md?raw";
 
-const TITLE = "Política de Privacidad | CENTRAL San Miguel Centro";
-const DESCRIPTION = "Política de Privacidad de Central San Miguel Centro, plaza operada por Grupo Galo, S.A. de C.V.";
+const TITLE = "Política de Privacidad | CENTRAL Santa Rosa de Lima";
+const DESCRIPTION = "Política de Privacidad de Central Santa Rosa de Lima, plaza operada por Grupo Galo, S.A. de C.V.";
 
 export const Route = createFileRoute("/privacidad")({
   head: () => ({

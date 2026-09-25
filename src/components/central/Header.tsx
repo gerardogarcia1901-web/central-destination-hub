@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Search, ExternalLink, X, Globe2, ChevronDown, Check, Clock } from "lucide-react";
+import { Menu, Search, ExternalLink, X, Globe2, ChevronDown, Check, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -87,7 +87,7 @@ export function LocationSwitcher({ inverse = false, compact = false }: { inverse
         <DropdownMenuSeparator className="m-0" />
         <div className="flex items-center gap-3 px-5 py-3 text-xs text-muted-foreground">
           <Check className="size-3.5" aria-hidden />
-          Estás en San Miguel Centro
+          Estás en Santa Rosa de Lima
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -133,7 +133,7 @@ function SearchDialog({ expanded = false }: { expanded?: boolean }) {
       </DialogTrigger>
       <DialogContent className="top-24 max-w-2xl translate-y-0 rounded-none border-border p-0">
         <DialogHeader className="border-b px-6 py-4">
-          <DialogTitle className="eyebrow text-muted-foreground">Buscar en San Miguel Centro</DialogTitle>
+          <DialogTitle className="eyebrow text-muted-foreground">Buscar en Santa Rosa de Lima</DialogTitle>
         </DialogHeader>
         <div className="p-6">
           <Input
@@ -215,8 +215,8 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className="ml-auto inline-flex items-center gap-2 text-sm font-medium text-ink-foreground transition-opacity hover:opacity-70"
                   >
-                    <Clock className="size-5" aria-hidden />
-                    <span className="hidden sm:inline">Horarios</span>
+                     <MapPin className="size-5" aria-hidden />
+                     <span className="hidden sm:inline">Cómo llegar</span>
                   </Link>
                 </div>
 
@@ -251,7 +251,7 @@ export function Header() {
 
                 <div className="container-central flex flex-col gap-4 border-t border-ink-foreground/15 py-8 md:flex-row md:items-center md:justify-between md:gap-8">
                   <SearchDialog expanded />
-                  <p className="max-w-md text-xs leading-relaxed text-ink-foreground/50">{center.hoursNote}</p>
+                   <p className="max-w-md text-xs leading-relaxed text-ink-foreground/50">Un nuevo Central está por llegar a Santa Rosa de Lima.</p>
                   <div className="w-fit md:shrink-0">
                     <LocationSwitcher inverse />
                   </div>

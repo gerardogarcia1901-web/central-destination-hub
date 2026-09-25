@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { Clock, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -11,9 +11,9 @@ import { PageHero, Section, SectionHeading } from "@/components/central/primitiv
 import { center } from "@/data/center";
 import { site } from "@/data/site";
 
-const TITLE = "Contacto | CENTRAL San Miguel Centro";
+const TITLE = "Contacto | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Escríbenos: WhatsApp 7697-9921 o info@grupogalo.net. Contacto de CENTRAL San Miguel Centro, plaza comercial en el Centro de San Miguel.";
+  "Escríbenos: WhatsApp 7697-9921 o info@grupogalo.net. Contacto de CENTRAL Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -77,7 +77,7 @@ function ContactoPage() {
                   <select
                     id="c-ubicacion"
                     name="ubicacion"
-                    defaultValue="San Miguel Centro"
+                    defaultValue="Santa Rosa de Lima"
                     className="h-11 w-full rounded-none border border-input bg-background px-3 text-sm"
                   >
                     <option value="CENTRAL general">CENTRAL general</option>
@@ -158,22 +158,7 @@ function ContactoPage() {
                   <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
                   <span>{center.address}</span>
                 </li>
-                <li className="flex gap-3">
-                  <Clock className="mt-0.5 size-4 shrink-0" aria-hidden />
-                  <span className="text-muted-foreground">{center.hoursNote}</span>
-                </li>
               </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild size="sm" className="rounded-none eyebrow">
-                  <a href={site.whatsappUrl} target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
-                </Button>
-                <Button asChild size="sm" variant="outline" className="rounded-none eyebrow">
-                  <a href={`mailto:${site.email}`}>Enviar correo</a>
-                </Button>
-                <Button asChild size="sm" variant="outline" className="rounded-none eyebrow">
-                  <a href={site.instagramUrl} target="_blank" rel="noreferrer">Ver Instagram</a>
-                </Button>
-              </div>
             </div>
             <div>
               <p className="eyebrow text-muted-foreground">Enlaces útiles</p>

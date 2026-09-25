@@ -18,16 +18,23 @@ export const Route = createFileRoute("/comercios/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
+      const title = "Comercio no encontrado | CENTRAL Santa Rosa de Lima";
+      const description = "Consulta el directorio de CENTRAL Santa Rosa de Lima.";
       return {
         meta: [
-          { title: "Comercio no encontrado | CENTRAL San Miguel Centro" },
+          { title },
+          { name: "description", content: description },
+          { property: "og:title", content: title },
+          { property: "og:description", content: description },
+          { property: "og:type", content: "website" },
+          { name: "twitter:card", content: "summary_large_image" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { store } = loaderData;
-    const title = `${store.name} | CENTRAL San Miguel Centro`;
-    const description = `${store.name} en CENTRAL San Miguel Centro, ${store.local}. Horario de atención y contacto del comercio.`;
+    const title = `${store.name} | CENTRAL Santa Rosa de Lima`;
+    const description = `${store.name} en CENTRAL Santa Rosa de Lima, ${store.local}. Horario de atención y contacto del comercio.`;
     return {
       meta: [
         { title },
