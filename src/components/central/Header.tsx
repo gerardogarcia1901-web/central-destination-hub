@@ -18,8 +18,7 @@ import { site } from "@/data/site";
 import { center } from "@/data/center";
 import { allStores } from "@/data/stores";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/central-san-miguel-centro.png.asset.json";
-import logoInverseAsset from "@/assets/central-san-miguel-centro-inverse.png.asset.json";
+import logoAsset from "@/assets/central-santa-rosa-de-lima-primary.png.asset.json";
 
 const menuGroups = [
   {
@@ -99,11 +98,11 @@ function Wordmark({ onNavigate, inverse = false }: { onNavigate?: () => void; in
   return (
     <Link to="/" onClick={onNavigate} className="block" aria-label={`${site.fullName}, inicio`}>
       <img
-        src={inverse ? logoInverseAsset.url : logoAsset.url}
-        alt="CENTRAL San Miguel Centro"
-        width={1512}
-        height={447}
-        className="h-10 w-auto max-w-[14rem] object-contain object-left md:h-12 md:max-w-[17rem]"
+        src={logoAsset.url}
+        alt="CENTRAL Santa Rosa de Lima"
+        width={1600}
+        height={574}
+        className="h-[3.2rem] w-auto max-w-[14rem] object-contain object-left md:h-[3.85rem] md:max-w-[17rem]"
       />
     </Link>
   );
