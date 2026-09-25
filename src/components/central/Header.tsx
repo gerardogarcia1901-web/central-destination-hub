@@ -14,7 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { site } from "@/data/site";
+import { site, otherLocations } from "@/data/site";
 import { center } from "@/data/center";
 import { allStores } from "@/data/stores";
 import { cn } from "@/lib/utils";
@@ -83,6 +83,16 @@ export function LocationSwitcher({ inverse = false, compact = false }: { inverse
             <ExternalLink className="ml-auto size-4 text-muted-foreground" aria-hidden />
           </a>
         </DropdownMenuItem>
+
+        <DropdownMenuSeparator className="m-0" />
+        {otherLocations.map((location) => (
+          <DropdownMenuItem key={location.name} asChild className="rounded-none p-0 focus:bg-muted">
+            <a href={location.url} target="_blank" rel="noreferrer" className="flex w-full items-center px-5 py-4">
+              <span className="font-display text-base font-semibold uppercase">{location.name}</span>
+              <ExternalLink className="ml-auto size-4 text-muted-foreground" aria-hidden />
+            </a>
+          </DropdownMenuItem>
+        ))}
 
         <DropdownMenuSeparator className="m-0" />
         <div className="flex items-center gap-3 px-5 py-3 text-xs text-muted-foreground">

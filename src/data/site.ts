@@ -20,6 +20,15 @@ export const site = {
   social: [{ label: "Instagram @central.elsalvador", href: "https://www.instagram.com/central.elsalvador/" }],
 } as const;
 
+/** Otras ubicaciones CENTRAL para el selector "Cambiar ubicación". */
+export const otherLocations = [
+  {
+    name: "CENTRAL San Miguel Centro",
+    // TODO: sustituir por la URL oficial del sitio de San Miguel Centro cuando se confirme.
+    url: "https://central.example.sv/san-miguel-centro",
+  },
+] as const;
+
 export const mainNav = [
   { label: "Inicio", to: "/" },
   { label: "Directorio", to: "/comercios" },
