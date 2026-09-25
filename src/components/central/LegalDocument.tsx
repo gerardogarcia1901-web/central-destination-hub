@@ -19,11 +19,13 @@ export function LegalDocument({ content }: { content: string }) {
     <article className="mx-auto max-w-3xl text-foreground">
       {blocks.map((block, index) => {
         const lines = block.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-        if (/^\d+\. /.test(lines[0])) {
-          return <h2 key={index} className="display-md mt-14 border-t border-border pt-8 text-2xl md:text-3xl">{lines[0]}</h2>;
+        const firstLine = lines[0];
+        if (!firstLine) return null;
+        if (/^\d+\. /.test(firstLine)) {
+          return <h2 key={index} className="display-md mt-14 border-t border-border pt-8 text-2xl md:text-3xl">{firstLine}</h2>;
         }
-        if (lines[0] === "Aviso de cookies") {
-          return <h3 key={index} className="mt-8 text-lg font-semibold">{lines[0]}</h3>;
+        if (firstLine === "Aviso de cookies") {
+          return <h3 key={index} className="mt-8 text-lg font-semibold">{firstLine}</h3>;
         }
         if (lines.every((line) => line.startsWith("• "))) {
           return (
