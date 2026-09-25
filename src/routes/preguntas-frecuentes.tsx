@@ -3,19 +3,18 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { PageHero, Section } from "@/components/central/primitives";
 
-const TITLE = "Preguntas frecuentes | CENTRAL San Miguel Centro";
-const DESCRIPTION = "Respuestas sobre ubicación, horarios, comercios, gastronomía, contacto y arrendamiento en Central San Miguel Centro.";
+const TITLE = "Preguntas frecuentes | CENTRAL Santa Rosa de Lima";
+const DESCRIPTION = "Respuestas sobre CENTRAL Santa Rosa de Lima, su ubicación, apertura, marcas y arrendamiento.";
 
 const questions = [
-  { question: "¿Dónde está Central San Miguel Centro?", answer: "En 2da Calle Poniente y 1ra Avenida Norte, Centro de San Miguel, frente al nuevo Mercado Central, ex Parque Barrios." },
-  { question: "¿Central San Miguel Centro tiene parqueo?", answer: "No. Central San Miguel Centro es una plaza peatonal y no cuenta con parqueo propio." },
-  { question: "¿Cuál es el horario?", answer: "La plaza no maneja un único horario general. Cada comercio tiene su propio horario; consúltalo en el Directorio." },
-  { question: "¿Qué comercios hay?", answer: "Actualmente encuentras PAR2, Farmacia La Buena, Las Ollitas, Pizza La Siciliana y Cora Store." },
-  { question: "¿Qué opciones de gastronomía hay?", answer: "Las Ollitas y Pizza La Siciliana forman parte de la oferta gastronómica actual." },
-  { question: "¿Dónde puedo ver promociones y eventos?", answer: "Consulta las secciones Promociones y Eventos de Central San Miguel Centro." },
-  { question: "¿Cómo llego?", answer: "Puedes abrir la ruta directamente en Google Maps o Waze desde la sección Cómo llegar." },
-  { question: "¿Cómo contacto a CENTRAL?", answer: "Escríbenos por WhatsApp al 7697-9921 o al correo info@grupogalo.net." },
-  { question: "¿Cómo puedo consultar por arrendamiento?", answer: "Completa el formulario de Arrendamiento de Central San Miguel Centro." },
+  { question: "¿Dónde estará Central Santa Rosa de Lima?", answer: "Sobre Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador." },
+  { question: "¿Central Santa Rosa de Lima ya está abierto?", answer: "No. El proyecto se encuentra en desarrollo y se presenta públicamente como Próximamente." },
+  { question: "¿Cuándo abrirá Central Santa Rosa de Lima?", answer: "La fecha de apertura se comunicará a través de los canales oficiales de CENTRAL cuando corresponda." },
+  { question: "¿Qué marcas habrá en Central Santa Rosa de Lima?", answer: "Las marcas se anunciarán en los canales oficiales de CENTRAL conforme sean confirmadas para publicación." },
+  { question: "¿Habrá gastronomía y servicios?", answer: "La oferta de gastronomía y servicios se comunicará oficialmente conforme avance el proyecto." },
+  { question: "¿Dónde puedo ver promociones y eventos?", answer: "Las secciones Promociones y Eventos están publicadas y mostrarán la información vigente cuando exista actividad confirmada." },
+  { question: "¿Cómo llego al proyecto?", answer: "Puedes abrir la ubicación en Google Maps o Waze desde la sección Cómo llegar." },
+  { question: "¿Cómo puedo consultar por arrendamiento?", answer: "Completa el formulario de Arrendamiento de Central Santa Rosa de Lima." },
 ] as const;
 
 export const Route = createFileRoute("/preguntas-frecuentes")({

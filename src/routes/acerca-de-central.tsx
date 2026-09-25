@@ -34,7 +34,7 @@ function AcercaPage() {
         <div className="grid gap-10 md:grid-cols-2">
           <article className="rule-line pt-5">
             <p className="eyebrow text-muted-foreground">San Miguel</p>
-            <h2 className="display-md mt-4 text-2xl">CENTRAL San Miguel Centro</h2>
+            <h2 className="display-md mt-4 text-2xl">CENTRAL Santa Rosa de Lima</h2>
             <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">
               Una plaza urbana en el centro de San Miguel, pensada para compras, gastronomía, servicios y conveniencia cotidiana.
             </p>

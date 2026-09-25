@@ -63,10 +63,7 @@ function Home() {
       <section aria-label="Información de la plaza" className="border-b border-border bg-background">
         <div className="container-central py-14 md:py-20">
           <p className="eyebrow text-muted-foreground">Próximamente</p>
-          <h2 className="display-md mt-4">Un nuevo concepto comercial en la zona oriental.</h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Central Santa Rosa de Lima se encuentra en desarrollo. Pronto conocerás más detalles sobre este nuevo punto de encuentro.
-          </p>
+           <h2 className="display-md mt-4">Un nuevo Central está por llegar a Santa Rosa de Lima.</h2>
         </div>
       </section>
 
@@ -74,13 +71,12 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="Directorio"
-          title="Marcas y comercios"
+           title="Directorio"
           description="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
         />
         <div className="mt-12">
           <ContentPlaceholder
             title="Próximamente conocerás las marcas que formarán parte de Central Santa Rosa de Lima."
-            description="Estamos trabajando para traerte las mejores opciones."
           />
         </div>
       </Section>

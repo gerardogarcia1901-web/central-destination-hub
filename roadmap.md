@@ -19,3 +19,7 @@
 - [ ] Contenidos de promociones, eventos y novedades.
 - [ ] URL del sitio matriz de CENTRAL (hoy provisional).
 - [ ] Configurar y verificar un dominio de correo propio para activar los envíos reales.
+
+## Adaptación Santa Rosa de Lima
+- [x] Adaptar íntegramente el contenido público a CENTRAL Santa Rosa de Lima según el brief oficial.
+- [ ] Sustituir los enlaces de mapas por los enlaces oficiales cuando Grupo Galo los proporcione.

@@ -3,8 +3,8 @@ import { PageHero, Section } from "@/components/central/primitives";
 import { LegalDocument } from "@/components/central/LegalDocument";
 import termsText from "@/data/legal/terminos.md?raw";
 
-const TITLE = "Términos y Condiciones | CENTRAL San Miguel Centro";
-const DESCRIPTION = "Términos y Condiciones de uso del sitio de Central San Miguel Centro.";
+const TITLE = "Términos y Condiciones | CENTRAL Santa Rosa de Lima";
+const DESCRIPTION = "Términos y Condiciones de uso del sitio de Central Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/terminos")({
   head: () => ({

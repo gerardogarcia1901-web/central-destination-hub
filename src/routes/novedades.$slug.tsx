@@ -16,7 +16,7 @@ export const Route = createFileRoute("/novedades/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Nota no encontrada | CENTRAL San Miguel Centro" },
+           { title: "Nota no encontrada | CENTRAL Santa Rosa de Lima" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -24,11 +24,12 @@ export const Route = createFileRoute("/novedades/$slug")({
     const { article } = loaderData;
     return {
       meta: [
-        { title: `${article.title} | CENTRAL San Miguel Centro` },
+         { title: `${article.title} | CENTRAL Santa Rosa de Lima` },
         { name: "description", content: article.summary },
         { property: "og:title", content: article.title },
         { property: "og:description", content: article.summary },
-        { property: "og:type", content: "article" },
+         { property: "og:type", content: "article" },
+         { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },

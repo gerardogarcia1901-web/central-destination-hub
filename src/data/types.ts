@@ -1,4 +1,4 @@
-// Modelo de contenido de CENTRAL San Miguel Centro.
+// Modelo de contenido de CENTRAL Santa Rosa de Lima.
 // Refleja únicamente la información oficial del Brief de Contenido Web
 // (Grupo Galo, septiembre 2026). Toda la UI consume estas interfaces.
 

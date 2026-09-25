@@ -11,9 +11,9 @@ import { PageHero, Section, SectionHeading } from "@/components/central/primitiv
 import { center } from "@/data/center";
 import { site } from "@/data/site";
 
-const TITLE = "Contacto | CENTRAL San Miguel Centro";
+const TITLE = "Contacto | CENTRAL Santa Rosa de Lima";
 const DESCRIPTION =
-  "Escríbenos: WhatsApp 7697-9921 o info@grupogalo.net. Contacto de CENTRAL San Miguel Centro, plaza comercial en el Centro de San Miguel.";
+  "Contacto de CENTRAL Santa Rosa de Lima.";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -77,7 +77,7 @@ function ContactoPage() {
                   <select
                     id="c-ubicacion"
                     name="ubicacion"
-                    defaultValue="San Miguel Centro"
+                     defaultValue="Santa Rosa de Lima"
                     className="h-11 w-full rounded-none border border-input bg-background px-3 text-sm"
                   >
                     <option value="CENTRAL general">CENTRAL general</option>

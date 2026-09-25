@@ -81,17 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CENTRAL San Miguel Centro" },
+      { title: "CENTRAL Santa Rosa de Lima" },
       {
         name: "description",
         content:
-          "Encuentra comercios, gastronomía, servicios, promociones, eventos y cómo llegar a Central San Miguel Centro.",
+          "Encuentra comercios, gastronomía, servicios, promociones, eventos y cómo llegar a Central Santa Rosa de Lima.",
       },
-      { name: "author", content: "CENTRAL San Miguel Centro · Grupo Galo" },
-      { property: "og:title", content: "CENTRAL San Miguel Centro" },
+      { name: "author", content: "CENTRAL Santa Rosa de Lima · Grupo Galo" },
+      { property: "og:title", content: "CENTRAL Santa Rosa de Lima" },
       {
         property: "og:description",
-        content: "Encuentra comercios, gastronomía, servicios, promociones, eventos y cómo llegar a Central San Miguel Centro.",
+        content: "Encuentra comercios, gastronomía, servicios, promociones, eventos y cómo llegar a Central Santa Rosa de Lima.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
