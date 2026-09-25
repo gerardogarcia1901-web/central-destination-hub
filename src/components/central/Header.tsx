@@ -94,7 +94,7 @@ export function LocationSwitcher({ inverse = false, compact = false }: { inverse
   );
 }
 
-function Wordmark({ onNavigate, inverse = false }: { onNavigate?: () => void; inverse?: boolean }) {
+function Wordmark({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <Link to="/" onClick={onNavigate} className="block" aria-label={`${site.fullName}, inicio`}>
       <img
@@ -209,7 +209,7 @@ export function Header() {
                     <X className="size-5" />
                     <span className="hidden sm:inline">Cerrar</span>
                   </Button>
-                  <Wordmark onNavigate={() => setOpen(false)} inverse />
+                   <Wordmark onNavigate={() => setOpen(false)} />
                   <Link
                     to="/visitanos"
                     onClick={() => setOpen(false)}
