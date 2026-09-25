@@ -23,3 +23,4 @@
 ## Adaptación Santa Rosa de Lima
 - [x] Adaptar íntegramente el contenido público a CENTRAL Santa Rosa de Lima según el brief oficial.
 - [ ] Sustituir los enlaces de búsqueda por los enlaces oficiales de Google Maps y Waze cuando Grupo Galo los proporcione.
+- [ ] Confirmar URL oficial del sitio de CENTRAL San Miguel Centro (selector usa provisional)

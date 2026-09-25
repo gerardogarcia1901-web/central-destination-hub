@@ -1,9 +1,11 @@
 import type { CenterInfo } from "./types";
 
 const ADDRESS = "Ruta Militar / RN18E, frente al desvío hacia Bolívar, Santa Rosa de Lima, La Unión, El Salvador";
-const MAPS_PLACE = ADDRESS;
-const OFFICIAL_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
-const OFFICIAL_WAZE_URL = `https://www.waze.com/ul?q=${encodeURIComponent(ADDRESS)}&navigate=yes`;
+// Ubicación oficial: "central | Santa Rosa" — pin exacto del Content Master
+const MAPS_PLACE = "central | Santa Rosa";
+const MAPS_COORDS = "13.6112508,-87.9360546";
+const OFFICIAL_MAPS_URL = "https://maps.app.goo.gl/tUrt3RAF3YLUGgAm6";
+const OFFICIAL_WAZE_URL = `https://www.waze.com/ul?ll=${MAPS_COORDS}&navigate=yes`;
 
 export const center: CenterInfo = {
   name: "CENTRAL Santa Rosa de Lima",
@@ -21,7 +23,7 @@ export const center: CenterInfo = {
   addressDetail: "Frente al desvío hacia Bolívar.",
   mapsUrl: OFFICIAL_MAPS_URL,
   wazeUrl: OFFICIAL_WAZE_URL,
-  mapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(MAPS_PLACE)}&z=15&output=embed`,
+  mapsEmbedUrl: `https://www.google.com/maps?q=${MAPS_COORDS}&z=15&output=embed`,
   hoursNote: "Próximamente",
   stats: [],
   directions: [
